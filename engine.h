@@ -13,9 +13,9 @@ public:
 	Engine& operator =(Engine&&) = default;
 	~Engine() = default;
 
-    void registerCommand(Wrapper* wrapper, const std::string& commandName);
+    void registerCommand(Wrapper* wrapper, const std::string& command_name);
 
-    int execute(const std::string& commandName, const map_args& args);
+    int execute(const std::string& command_name, const map_args& args);
 
 private:
     std::map<std::string, Wrapper*> commands;
